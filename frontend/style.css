@@ -1,5 +1,5 @@
 body {
-    background-image: url(images/index1.jpeg);
+    background-image: url(images/background2.jpg);
     width: 100%;
     height: 100%;
     background-position: center;
@@ -17,7 +17,36 @@ body {
 main {
     width: 100%;
     height: 100vh;
-    overflow: hidden;    
+    overflow: hidden; 
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.search-wrapper{
+    justify-content: center;
+    flex-direction: row;
+    height: 80vh;
+    width: 800px;;
+}
+
+.search-wrapper:focus{
+    border-color: rgb(255, 255, 255);
+}
+
+
+.connectIcons{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.connectIcons li{
+    margin-left: 5px;
+}
+
+#aboutUs{
+    font-family: 'Karma', serif;
 }
 
 #title {
@@ -28,6 +57,12 @@ main {
 }
 #searchBarForm{
     color:white;
+    width: 320px;
+}
+
+#searchBarForm:focus{
+    border-bottom: 1px solid #b71C1C;
+    box-shadow: 0 1px 0 0 #b71C1C; 
 }
  /* .logo */
  .sb-search {
