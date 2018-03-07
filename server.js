@@ -22,11 +22,11 @@ app.set('view engine', 'handlebars');
 
 
 //getting the models from db as db
-// const db = require('./models');
+const db = require('./models');
 
 //sync to db, start listening
-// db.sync().then( () => {
+db.sequelize.sync().then( () => {
     app.listen(port, () => {
         console.log(`Listening on port: ${port}`);
     });
-// });
+});
