@@ -35,3 +35,5 @@ router.put('/recipe', function(req,res){
 // router.delete('/recipe', function(req,res){
 // 	res.send({type:'DELETE'});
 // });
+
+module.exports = router;
