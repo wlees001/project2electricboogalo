@@ -1,0 +1,11 @@
+User Input: link to recipe
+[ this is what the search bar is taking in ]
+    |
+    |
+Spoonacular API
+    |           |
+    |           |
+    /           \
+send to:        Recipe Table in DB
+DeepAI
+Sentiment Call
