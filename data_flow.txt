@@ -6,6 +6,22 @@ Spoonacular API
     |           |
     |           |
     /           \
-send to:        Recipe Table in DB
+send to:        Recipe Table in DB (link)
 DeepAI
-Sentiment Call
+Sentiment API Call
+|
+|
+Spotify API
+(playlist generate based on sentiment)
+|
+|
+Playlist Table in DB
+
+
+Options:
+
+saving links to recipe + playlist
+
+OR
+
+saving playlist information, recipe information directly into db
