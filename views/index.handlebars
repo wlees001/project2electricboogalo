@@ -1,20 +1,51 @@
-
-    <div class="col-sm-4 col-md-4 col-lg-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">PLAYTE</div>
-        <div class="panel-body">
-          {{#each eaten}}
-          <p>
-            {{id}}. {{links}}
-              <form action="/{{this.links}}?_method=PUT" method="POST">
-              <input type="hidden" name="id" value="{{this.links}}">
-              </form>
-          </p>
-          {{/each }}
-            <li>{{this.links}}</li>
-
+<nav class="transparent" class="col l12 s12">
+        <div class="nav-wrapper">
+          <a id="title" class="center-align">Playte</a>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+</nav>
+  <body>
+    <main>
+        <div class="search-wrapper container valign-wrapper">
+            <form method="Get" action="/api">
+                <div class="row">
+                <input id="searchBarForm" type="text" placeholder="Paste a Recipe URL"></input>
+                <input type="submit" class="btn red darken-4"></input>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="page-footer transparent">
+            <div class="container">
+              <div class="row" id="aboutUs">
+                <div class="col l5 s10">
+                  <h5 class="white-text">About Us</h5>
+                  <p class="white-text text-lighten-4">It started as an idea, to combine the essence of cooking with music. Let's cook together!</p>
+
+                </div>
+                <div class="col l5 s10">
+                    <h5 class"white-text">
+                        Email
+                    </h5>
+                        <address>
+                                Contact Us @ <a href="playteconnect@gmail.com">playteconnect@gmail.com</a>.<br> 
+                                </address>
+                </div>
+                <div>
+                <div class="col l5 s10">
+                  <h5 class="white-text">Connect</h5>
+                  <ul class="connectIcons">
+                    <li><a class="white-text" href="#!"><img src="images/facebook.png"></a></li>
+                    <li><a class="white-text" href="#!"><img src="images/instagram.png"></a></li>
+                    <li><a class="white-text" href="#!"><img src="images/twitter.png"></a></li>
+                    <li><a class="white-text" href="#!"><img src="images/pinterest.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright ">
+                <div class="container center-align">
+                        <p class="white-text">© 2018 Playte Inc.</h5>
+                </div>
+              </div>
+          </footer>
+          
