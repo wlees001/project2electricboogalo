@@ -22,6 +22,7 @@ app.use(methodOverride("_method"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+require('./api-routes.js')(app);
 //set up routes for the server
 // app.use(router);
 

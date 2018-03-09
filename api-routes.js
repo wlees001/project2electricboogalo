@@ -1,13 +1,18 @@
 const db = require("./models");
 
 const express = require('express');
-const router = express.Router();
+// const router = express.Router();
 
-module.exports = function (app) {
+module.exports = function (router) {
 	
-	app.get("/", function (req, res) {
-            return res.render("index", {
-  });
+	router.get('/', function(req, res) {
+		db.Search.findAll().then( (data) => {
+			res.render('index',{
+				eaten : data
+			});
+		})
+	});
+	  
     
 	//get playlist from the db
 	router.get('/songs', function(req,res){
