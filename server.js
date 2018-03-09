@@ -29,12 +29,6 @@ app.set("view engine", "handlebars");
 
 
 //getting the models from db as db
-<<<<<<< HEAD
-const db = require('./models');
-
-//sync to db, start listening
-db.sequelize.sync().then( () => {
-=======
 require("./api-routes.js")(app);
 
 
@@ -44,7 +38,6 @@ db.sequelize.sync().then( () => {
         links: "https://open.spotify.com/user/1258026110/playlist/16NA89u5RnWwip43Ir0EVq"
 
     })
->>>>>>> e7440d869b4eca134380af3cd54cfb48f0ae4db6
     app.listen(port, () => {
         console.log(`Listening on port: ${port}`);
     });
