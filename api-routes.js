@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-const router = express.Router();
-const express = require('express');
-
-=======
 const db = require("./models");
 
 const express = require('express');
@@ -11,9 +6,9 @@ const router = express.Router();
 module.exports = function (app) {
 	app.get("/", function (req, res) {
             return res.render("index", {
-        });	
+		})
+	});	
 	
->>>>>>> e7440d869b4eca134380af3cd54cfb48f0ae4db6
 //get playlist from the db
 router.get('/songs', function(req,res){
 	res.send({type:'GET'});
@@ -48,9 +43,4 @@ router.put('/recipe', function(req,res){
 // router.delete('/recipe', function(req,res){
 // 	res.send({type:'DELETE'});
 // });
-<<<<<<< HEAD
-
-module.exports = router;
-=======
 };
->>>>>>> e7440d869b4eca134380af3cd54cfb48f0ae4db6
