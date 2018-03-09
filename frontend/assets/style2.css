@@ -1,0 +1,40 @@
+body{
+  background-color: white;
+}
+.section1 {
+  background-color: white;
+  position:absolute;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  width:100%; 
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.text {
+  text-align: center;
+}
+
+
+footer {
+  background-color: #1c1c1c !important;
+  position:absolute;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  width:100%; 
+  top: 500%; 
+  height: 250px;
+  text-align: center;
+}
+
+.footer p{
+  color: white;
+  margin-top: 5%;
+}
+
+.footer a{
+  color: white;
+  margin: 5px;
+}
+
