@@ -14,6 +14,12 @@
     position:absolute;
     
 }
+nav {
+    height: 80px;
+}
+.nav-wrapper img {
+    padding-top: 7px;
+}
 .description{
     margin-top: 15%;
     color: white;
@@ -29,6 +35,7 @@ h2{
 ::placeholder {
     color:white; 
     font-weight: bolder;
+    text-shadow: black 2px 2px 3px;
 }
 
 main {
