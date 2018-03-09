@@ -1,4 +1,5 @@
 body {
+    background-image: url(images/background2.jpg);
     /* background-image: url(/images/index1.jpeg); */
     width: 100%;
     height: 100%;
@@ -16,7 +17,7 @@ body {
 main {
     width: 100%;
     height: 100vh;
-    overflow: hidden; 
+    overflow: hidden;
 }
 .row{
     display: flex;
@@ -61,7 +62,7 @@ main {
 
 #searchBarForm:focus{
     border-bottom: 1px solid #b71C1C;
-    box-shadow: 0 1px 0 0 #b71C1C; 
+    box-shadow: 0 1px 0 0 #b71C1C;
 }
  /* .logo */
  .sb-search {
@@ -100,4 +101,5 @@ main {
 
 input[type="search"].sb-search-input {
 	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
 }

@@ -8,8 +8,6 @@ const exphbs = require('express-handlebars');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const db = require("./models"); 
-
 //establish public dir
 app.use(express.static(__dirname + '/public'));
 
@@ -29,15 +27,14 @@ app.set("view engine", "handlebars");
 
 
 //getting the models from db as db
-require("./api-routes.js")(app);
+const db = require('./models');
 
 
 //sync to db, start listening
 db.sequelize.sync().then( () => {
     db.Search.create({
         links: "https://open.spotify.com/user/1258026110/playlist/16NA89u5RnWwip43Ir0EVq"
-
-    })
+    });
     app.listen(port, () => {
         console.log(`Listening on port: ${port}`);
     });

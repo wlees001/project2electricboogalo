@@ -28,7 +28,6 @@
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.10",
     "mysql2": "^1.5.2",
-    "router-express": "^1.5.2",
     "sequelize": "^4.35.1"
   }
 }
