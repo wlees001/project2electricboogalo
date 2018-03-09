@@ -7,8 +7,8 @@ module.exports = function (app) {
 	
 	app.get("/", function (req, res) {
             return res.render("index", {
-    });
-
+  });
+    
 	//get playlist from the db
 	router.get('/songs', function(req,res){
 		res.send({type:'GET'});
@@ -21,7 +21,6 @@ module.exports = function (app) {
 	router.put('/songs', function(req,res){
 		res.send({type:'PUT'});
 	});
-
 
 	// get playlist from the db
 	router.get('/recipe', function(req,res){

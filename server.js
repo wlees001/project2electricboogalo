@@ -34,7 +34,6 @@ const db = require('./models');
 db.sequelize.sync().then( () => {
     db.Search.create({
         links: "https://open.spotify.com/user/1258026110/playlist/16NA89u5RnWwip43Ir0EVq"
-
     });
     app.listen(port, () => {
         console.log(`Listening on port: ${port}`);
