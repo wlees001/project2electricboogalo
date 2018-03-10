@@ -28,6 +28,9 @@
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.10",
     "mysql2": "^1.5.2",
-    "sequelize": "^4.35.1"
+    "request": "^2.83.0",
+    "sequelize": "^4.35.1",
+    "spotify-web-api-node": "^3.0.0",
+    "unirest": "^0.5.1"
   }
 }
