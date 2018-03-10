@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars');
 
 //set up Express App
 const app = express();
+//if it detects prod env, use that first
 const port = process.env.PORT || 3000;
 
 //establish public dir
@@ -22,14 +23,12 @@ app.use(methodOverride("_method"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-require('./api-routes.js')(app);
 //set up routes for the server
-// app.use(router);
+require('./api-routes.js')(app);
 
 
 //getting the models from db as db
 const db = require('./models');
-
 
 //sync to db, start listening
 db.sequelize.sync().then( () => {
