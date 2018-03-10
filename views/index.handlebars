@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="transparent" class="col l12 s12">
         <div class="nav-wrapper">
           <a id="title" class="center-align">Playte</a>
@@ -48,3 +49,25 @@
                 </div>
               </div>
           </footer>
+=======
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">PLAYTE</div>
+          <div class="panel-body">
+            {{#each eaten}}
+            <p>
+              {{id}}. {{links}}
+                <form action="/{{this.links}}?_method=PUT" method="POST">
+                <input type="hidden" name="id" value="{{this.links}}">
+                </form>
+            </p>
+            {{/each }}
+            <li>{{this.links}}</li>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+>>>>>>> Jens

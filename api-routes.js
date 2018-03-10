@@ -1,14 +1,19 @@
 const db = require("./models");
 
 const express = require('express');
-const router = express.Router();
+// const router = express.Router();
 
-module.exports = function (app) {
-	app.get("/", function (req, res) {
-            return res.render("index", {
-		})
-	});	
+module.exports = function (router) {
 	
+	router.get('/', function(req, res) {
+		db.Search.findAll().then( (data) => {
+			res.render('index',{
+				eaten : data
+			});
+		})
+	});
+	  
+    	
 //get playlist from the db
 router.get('/songs', function(req,res){
 	res.send({type:'GET'});
@@ -22,11 +27,6 @@ router.put('/songs', function(req,res){
 	res.send({type:'PUT'});
 });
 
-//delete song from db??
-// router.delete('/songs', function(req,res){
-	// res.send({type:'DELETE'});
-// });
-
 // get playlist from the db
 router.get('/recipe', function(req,res){
 	res.send({type:'GET'});
@@ -39,8 +39,5 @@ router.post('/recipe', function(req,res){
 router.put('/recipe', function(req,res){
 	res.send({type:'PUT'});
 });
-// delete recipe in db??
-// router.delete('/recipe', function(req,res){
-// 	res.send({type:'DELETE'});
-// });
+
 };
