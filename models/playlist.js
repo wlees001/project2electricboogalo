@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Playlist = sequelize.define('Playlist', {
-    name: DataTypes.STRING
+    link: DataTypes.STRING
   }, {});
   Playlist.associate = function(models) {
       Playlist.belongsTo(models.Search, {
