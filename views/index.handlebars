@@ -1,47 +1,85 @@
 <nav style="background-color:black; text-align:center;" class="col l12 s12">
   <div class="nav-wrapper">
     <a id="title" class="center-align">
-      <a href="/">
-        <img src="./images/logo.png" style="width:4%; margin-top:7px;">
-      </a>
+      <img src="images/logo.png" style="width:4%;" </img>
     </a>
   </div>
 </nav>
 
-<main>
-  </br>
-  </br>
-  <div style="text-align:center" class="row description">
-    <div class="col l12 s12">
-      <h3 style="color:#dedada;"> Attach a Spotify Playlist to your Recipe</h3>
-    </div>
-  </div>
-  <div class="search-wrapper container valign-wrapper">
-    <form>
-      <div class="row">
-        <input style="color:white;" id="searchBarForm" type="text" placeholder="Paste a Recipe URL"></input>
-        <input type="submit" class="btn red darken-4" id="submit"></input>
+<div class="section1">
+  <div class="container">>
+    <div style="text-align:center" class="row description">
+      <div class="col l12 s12">
+        <h2>Attach a Spotify Playlist to your Recipe</h2>
       </div>
-    </form>
-  </div>
-</main>
+    </div>
 
-    <div class="col-sm-4 col-md-4 col-lg-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">PLAYTE</div>
-          <div class="panel-body">
-            {{#each eaten}}
-            <p>
-              {{id}}. {{links}}
-                <form action="/{{this.links}}?_method=PUT" method="POST">
-                <input type="hidden" name="id" value="{{this.links}}">
-                </form>
-            </p>
-            {{/each }}
-            <li>{{this.links}}</li>
-
+    <div class="search-wrapper container valign-wrapper">
+      <form method="Get" action="/api">
+        <div class="row">
+          <div class="col l12 s12">
+            <input id="searchBarForm" type="text" placeholder="Paste a Recipe URL"></input>
+            <input type="submit" class="btn red darken-4"></input>
           </div>
         </div>
-      </div>
+      </form>
     </div>
+  </div>
+</div>
 
+
+
+<div class="section2">
+  <div style="background-color:black;" class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12" id="aboutUs">
+          <h5 class="white-text">About Us</h5>
+          <p class="white-text text-lighten-4">It started as an idea, to combine the essence of cooking with music. Let's cook together!</p>
+        </div>
+
+
+
+
+        <div style="text-align:center" class="col l6 s12 social">
+          <a class="sficn" effect="scale" target="_blank" href="#" id="sfsiid_facebook" alt="Facebook" style="opacity:1">
+            <img alt="Facebook" title="Facebook" src="http://web95.s144.goserver.host/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/flat/flat_facebook.png"
+              style="" class="sfcm sfsi_wicon" effect="scale" width="30" height="30">
+          </a>
+
+          <a class="sficn" effect="scale" target="_blank" href="#" id="sfsiid_email" alt="Follow by Email" style="opacity:1">
+            <img alt="Follow by Email" title="Follow by Email" src="http://web95.s144.goserver.host/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/flat/flat_email.png"
+              style="" class="sfcm sfsi_wicon" effect="scale" width="30" height="30">
+          </a>
+
+          <a class="sficn" effect="scale" target="_blank" href="#" id="sfsiid_instagram" alt="Instagram" style="opacity:1">
+            <img alt="Instagram" title="Instagram" src="http://web95.s144.goserver.host/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/flat/flat_instagram.png"
+              style="" class="sfcm sfsi_wicon" effect="scale" width="30" height="30">
+          </a>
+
+          <a class="sficn" effect="scale" target="_blank" href="javascript:void(0);" id="sfsiid_twitter" alt="Twitter" style="opacity:1">
+            <img alt="Twitter" title="Twitter" src="http://web95.s144.goserver.host/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/flat/flat_twitter.png"
+              style="" class="sfcm sfsi_wicon" effect="scale" width="30" height="30">
+          </a>
+          <script>jQuery(".sfsi_widget").each(function (index) {
+              if (jQuery(this).attr("data-position") == "widget") {
+                var wdgt_hght = jQuery(this).children(".norm_row.sfsi_wDiv").height();
+                var title_hght = jQuery(this).parent(".widget.sfsi").children(".widget-title").height();
+                var totl_hght = parseInt(title_hght) + parseInt(wdgt_hght);
+                jQuery(this).parent(".widget.sfsi").css("min-height", totl_hght + "px");
+              }
+            });
+          </script>
+        </div>
+      </div>
+
+      <div class="row email">
+        <div style="text-align:center; margin-top: 50px;" class="col l12 s112">
+          <p class="made-by-me">Made by PLAYTE &copy; 2018.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
