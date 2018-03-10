@@ -1,31 +1,48 @@
 const db = require("./models");
 
 const express = require('express');
-// const router = express.Router();
 
-module.exports = function (router) {
+module.exports = function (app) {
 
-	router.get('/', function(req, res) {
-		//serve back the main page
+	//homepage
+	app.get('/', function(req, res) {
+		//serve back the home page
 		res.render('index');
 	});
 
-	//get playlist from the db
-	router.get('/songs', function(req,res){
-		res.send({type:'GET'});
+	//recipe + playlist page
+	app.get('/results', function(req, res) {
+		//render something
+		// res.render('results');
 	});
-	//add new songs to db
-	router.post('/songs', function(req,res){
-		res.send({type:'POST'});
+
+	//get playlist from the db
+	app.get('/playlist/:id', function(req,res){
+		const id = req.params.id;
+		//get the playlist by id and return it
+		db.Playlist.findById(id).then(playlist => res.json(playlist));
+	});
+
+	//add new playlists to db
+	app.post('/playlist', function(req,res){
+		//get the playlist link being sent in and return it
+		db.Playlist.create({ link : req.body.link}).then( playlist => res.json(playlist));
 	});
 
 	// get playlist from the db
-	router.get('/recipe', function(req,res){
-		res.send({type:'GET'});
+	app.get('/recipe/:id', function(req,res){
+		const id = req.params.id;
+		//get the recipe by the id and return it
+		db.Search.findById(id).then(recipe => res.json(recipe));
 	});
+
 	// add new recipe to db
-	router.post('/recipe', function(req,res){
-		res.send({type:'POST'});
+	app.post('/recipe', function(req,res){
+		db.Search.create({ links : req.body.link}).then( recipe => {
+			//mirror back recipe
+			res.json(recipe);
+			//redirect to second page using id?
+		});
 	});
 
 };
