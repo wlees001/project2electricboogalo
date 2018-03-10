@@ -7,70 +7,97 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="./css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="./css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="assets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
 </head>
 <body>
-  <!-- Fixed nav bar -->
-<nav class="transparent" class="col l12 s12">
-        <div class="nav-wrapper">
-          <a id="title" class="center-align">Playte</a>
-        </div>
-</nav>
-  <body>
-    <main>
-        <div class="search-wrapper container valign-wrapper">
-            <form method="Get" action="/api">
-                <div class="row">
-                <input id="searchBarForm" type="text" placeholder="Paste a Recipe URL"></input>
-                <input type="submit" class="btn red darken-4"></input>
-                </div>
-            </form>
-        </div>
-    </main>
-    <footer class="page-footer transparent">
-            <div class="container">
-              <div class="row" id="aboutUs">
-                <div class="col l5 s10">
-                  <h5 class="white-text">About Us</h5>
-                  <p class="white-text text-lighten-4">It started as an idea, to combine the essence of cooking with music. Let's cook together!</p>
-
-                </div>
-                <div class="col l5 s10">
-                    <h5 class"white-text">
-                        Email
-                    </h5>
-                        <address>
-                                Contact Us @ <a href="playteconnect@gmail.com">playteconnect@gmail.com</a>.<br> 
-                                </address>
-                </div>
-                <div>
-                <div class="col l5 s10">
-                  <h5 class="white-text">Connect</h5>
-                  <ul class="connectIcons">
-                    <li><a class="white-text" href="#!"><img src="images/facebook.png"></a></li>
-                    <li><a class="white-text" href="#!"><img src="images/instagram.png"></a></li>
-                    <li><a class="white-text" href="#!"><img src="images/twitter.png"></a></li>
-                    <li><a class="white-text" href="#!"><img src="images/pinterest.png"></a></li>
-                  </ul>
-                </div>
+    
+  
+        <!-- Fixed nav bar -->
+      <nav style="background-color:black; text-align:center;" class="col l12 s12">
+              <div class="nav-wrapper">
+                <a id="title" class="center-align"><img src="assets/images/logo.png" style="width:4%;"</img></a>
+      
+              </div>
+      </nav>
+  
+        <div class="section1">    
+            <div class="container">>
+              <div style="text-align:center" class="row description">
+                  <div class="col l12 s12">  
+                    <h2>Attach a Spotify Playlist to your Recipe</h2>
+                  </div>
+              </div>   
+            
+              <div class="search-wrapper container valign-wrapper"> 
+                  <form method="Get" action="/api">
+                    <div class="row">
+                        <div class="col l12 s12"> 
+                          <input id="searchBarForm" type="text" placeholder="Paste a Recipe URL"></input>
+                          <input type="submit" class="btn red darken-4"></input>
+                        </div>
+                    </div>
+                  </form>
               </div>
             </div>
-            <div class="footer-copyright ">
-                <div class="container center-align">
-                        <p class="white-text">© 2018 Playte Inc.</h5>
-                </div>
-              </div>
-          </footer>
+        </div>
+
+  <div class="section2">
+    <div style="background-color:black;" class="page-footer">
+      <div class="container">
+        <div class="row" >
+          <div class="col l6 s12" id="aboutUs">
+            <h5 class="white-text">About Us</h5>
+            <p class="white-text text-lighten-4">It started as an idea, to combine the essence of cooking with music. Let's cook together!</p>
+          </div>
+                
+          
+                
+          
+          <div style="text-align:center" class="col l6 s12 social">              
+                  <a class="sficn" effect="scale" target="_blank" href="#" id="sfsiid_facebook" alt="Facebook" style="opacity:1"><img alt="Facebook" title="Facebook" src="http://web95.s144.goserver.host/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/flat/flat_facebook.png" style="" class="sfcm sfsi_wicon" effect="scale" width="30" height="30"></a>
+
+                  <a class="sficn" effect="scale" target="_blank" href="#" id="sfsiid_email" alt="Follow by Email" style="opacity:1"><img alt="Follow by Email" title="Follow by Email" src="http://web95.s144.goserver.host/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/flat/flat_email.png" style="" class="sfcm sfsi_wicon" effect="scale" width="30" height="30"></a>
+
+                  <a class="sficn" effect="scale" target="_blank" href="#" id="sfsiid_instagram" alt="Instagram" style="opacity:1"><img alt="Instagram" title="Instagram" src="http://web95.s144.goserver.host/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/flat/flat_instagram.png" style="" class="sfcm sfsi_wicon" effect="scale" width="30" height="30"></a>
+
+                  <a class="sficn" effect="scale" target="_blank" href="javascript:void(0);" id="sfsiid_twitter" alt="Twitter" style="opacity:1"><img alt="Twitter" title="Twitter" src="http://web95.s144.goserver.host/wp-content/plugins/ultimate-social-media-icons/images/icons_theme/flat/flat_twitter.png" style="" class="sfcm sfsi_wicon" effect="scale" width="30" height="30"></a>
+                  <script>jQuery(".sfsi_widget").each(function( index ) {
+                      if(jQuery(this).attr("data-position") == "widget")
+                          {
+                              var wdgt_hght = jQuery(this).children(".norm_row.sfsi_wDiv").height();
+                              var title_hght = jQuery(this).parent(".widget.sfsi").children(".widget-title").height();
+                              var totl_hght = parseInt( title_hght ) + parseInt( wdgt_hght );
+                              jQuery(this).parent(".widget.sfsi").css("min-height", totl_hght+"px");
+                          }
+                      });
+                  </script>                
+          </div>
+        </div>  
+          
+        <div class="row email">
+            <div style="text-align:center; margin-top: 50px;" class="col l12 s112">
+                <p class="made-by-me">Made by PLAYTE &copy; 2018.</p>
+            </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>  
+  
+  
+    
 
  </body>
 
 
   <!--  Scripts-->
 
-  <script src="js/materialize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-  </body>
+
 </html>
