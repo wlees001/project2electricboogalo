@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/public'));
 
 //establish bodyParser
-app.use(bodyParser.urlencoded({ extended : false }));
+app.use(bodyParser.urlencoded({ extended : true }));
 app.use(bodyParser.json());
 
 // Override with POST having ?_method=DELETE
